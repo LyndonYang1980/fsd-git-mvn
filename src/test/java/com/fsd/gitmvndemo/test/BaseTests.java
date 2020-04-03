@@ -1,19 +1,18 @@
-package com.fsd.gitmvndemo;
+package com.fsd.gitmvndemo.test;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
 
+import com.fsd.gitmvndemo.config.Application;
 import com.fsd.gitmvndemo.service.Calculation;
 
-@SpringBootTest
+@SpringBootTest(classes = Application.class)
 @RunWith(SpringRunner.class)
-@WebAppConfiguration("src/main/resources")
 public class BaseTests {
 	
-	
+	@Test
 	public void testCalc() {
 		int a = 200;
 		int b = 100;
